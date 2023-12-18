@@ -1,0 +1,6 @@
+vars.tf
+terraform.*
+.terraform.*
+.terraform/
+*.pub
+*/saru-mumbai-keypair
