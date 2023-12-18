@@ -22,7 +22,8 @@ resource "aws_instance" "my-instance" {
 
   provisioner "remote-exec" {
     inline = [
-      "chmod +x web.sh"
+      "chmod +x web.sh",
+      "./web.sh"
     ]
   }
 
@@ -35,9 +36,9 @@ resource "aws_instance" "my-instance" {
 }
 
 output "PublicIp" {
-    value = aws_instance.my-instance.public_ip
+  value = aws_instance.my-instance.public_ip
 }
 
 output "PrivateIp" {
-    value = aws_instance.my-instance.private_ip
+  value = aws_instance.my-instance.private_ip
 }
